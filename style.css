@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    background-color: #FCFCFC;
+    font-family: 'Be Vietnam Pro';
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 0;
+    margin-top: 40px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    color: #FF8000;
+}
+
+header {
+    background-color: #FF8000;
+}
+
+.max-width {
+    max-width: 1570px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pd-left-right {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.header-content {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header-content img {
+    width: 150px;
+}
+
+.main-content {
+    display: flex;
+    width: 100%;
+}
+
+.content-sec {
+    flex: 1;
+}
+
+.basket-sec {
+    width: 350px;
+    height: 100vh;
+    box-shadow: 5px 0px 27px 0px rgba(0,0,0,0.45);
+    top: 0;
+    overflow: hidden;
+    position: sticky;
+}
+
+.basket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.basket-content{
+    border-top: 1px solid #c9c9c9;
+    border-bottom: 1px solid #c9c9c9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.basket-item{
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.basket-item-informations{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.amount_div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #F5F3F1;
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+
+.amount-btn:hover{
+    cursor: pointer;
+}
+
+.main-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.restaurant-information {
+    display: flex;
+    gap: 20px;
+}
+
+.restaurant-information-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.restaurant-information-item img {
+    width: 20px;
+}
+
+.nav-div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#nav_item_pizza {
+    color: white;
+    background-color: black;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+}
+
+.meal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.meal-image{
+    height: 200px;
+    object-fit: cover;
+}
+
+.meal-item {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px #c9c9c9;
+    border-radius: 15px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.meal-item:hover{
+    background-color: #F5F5F5;
+}
+
+.meal-information {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-meal-button {
+    width: 40px;
+    height: 40px;
+}
+
+footer{
+    background-color: #c9c9c9;
+
+}
+
+.footer-content {
+    max-width: 1920px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 40px;
+    color: #FF8000;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestellapp</title>
+    <link rel="icon" type="image/x-icon" href="./Material/Favicon/favicon-16x16.png">
+    <script src="script.js"></script>
+    <script src="template.js"></script>
+    <script src="meals.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+</head>
+
+<body onload="init()">
+    <div class="full-content">
+        <header>
+            <section class="header-content">
+                <img src="./Material/Logo/Logo.png" alt="">
+            </section>
+        </header>
+        <div class="main-content">
+            <section class="content-sec">
+                <img class="main-img" src="./img/food.jpg" alt="">
+
+                <div class="restaurant-div max-width pd-left-right">
+                    <div class="restaurant">
+                        <div class="restaurant-title">
+                            <h1>Pizza + Pasta</h1>
+                        </div>
+                        <div class="restaurant-information">
+                            <div class="restaurant-information-item">
+                                <img src="./img/stern.png" alt="">
+                                <b>4.5</b> (200+)
+                            </div>
+                            <div class="restaurant-information-item">
+                                <img src="./img/warenkorb.png" alt="">
+                                Min. 10,00 €
+                            </div>
+                            <div class="restaurant-information-item">
+                                <img src="./img/motorrad.png" alt="">
+                                1,49 €
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-div max-width pd-left-right">
+                    <a id="nav_item_pizza" href="#">Pizza</a>
+                    <a id="nav_item_pasta" href="#">Pasta</a>
+                    <a id="nav_item_drinks" href="#">Getränke</a>
+                </div>
+
+                <div id="meals_div" class="meals-div max-width pd-left-right">
+                    <!--Elements to be rendered-->
+                </div>
+            </section>
+            <section class="basket-sec">
+                <div class="basket">
+                    <h1>Warenkorb</h1>
+                    <div class="basket-content" id="basket_content">
+                        <span id="empty_basket_msg">Füge ein Gericht zum Warenkorb hinzu.</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <section class="footer-content">
+                <img src="./Material/Favicon/favicon-32x32.png" alt="">
+                <span>Bestellapp</span>
+            </section>
+        </footer>
+    </div>
+</body>
+
+</html>
