@@ -115,10 +115,15 @@ header {
 .amount_div {
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
     background-color: #F5F3F1;
     padding: 3px 8px;
     border-radius: 20px;
+    width: 110px;
+}
+
+.amount-btn{
+    width: 25px;
 }
 
 .amount-btn:hover {

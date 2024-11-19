@@ -104,9 +104,18 @@ function removeItem(itemID) {
             basket[i].amount--;
             if(basket[i].amount==0){
                 basket.splice(i, 1);
-            }    
+            } else if (basket[i].amount == 1){
+            }
         }
     }
     renderBasket();
     checkIfBasketEmpty();
+}
+
+function checkButtonImage(amount){
+    if(amount>1){
+        return "minus"
+    } else {
+        return "bin"
+    }
 }

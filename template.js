@@ -28,7 +28,7 @@ function getBasketItemTemplate(mealToAdd) {
         <span id="meal_title">${mealToAdd.title}</span>
         <div class="basket-item-informations">
         <div class="amount_div">
-            <img class="amount-btn" src="./img/minus.png" alt="" onclick="removeItem(${mealToAdd.id})">
+            <img class="amount-btn" id="minus_btn" src="./img/${checkButtonImage(mealToAdd.amount)}.png" alt="" onclick="removeItem(${mealToAdd.id})">
             <span id="amount_${mealToAdd.id}">${mealToAdd.amount}</span>
             <img class="amount-btn" src="./img/plus.png" alt="" onclick="addToBasket(${mealToAdd.id})">
         </div>
