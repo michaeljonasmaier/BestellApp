@@ -35,7 +35,7 @@ h4 {
 
 header {
     background-color: #FF8000;
-    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.24);
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.24);
 }
 
 .max-width {
@@ -73,7 +73,7 @@ header {
 .basket-sec {
     width: 350px;
     height: 100vh;
-    box-shadow: -5px 2px 5px 0px rgba(0,0,0,0.24);
+    box-shadow: -5px 2px 5px 0px rgba(0, 0, 0, 0.24);
     top: 0;
     overflow: hidden;
     position: sticky;
@@ -87,7 +87,7 @@ header {
     width: 100%;
 }
 
-.basket-content{
+.basket-content {
     border-top: 1px solid #c9c9c9;
     border-bottom: 1px solid #c9c9c9;
     display: flex;
@@ -98,7 +98,7 @@ header {
     padding-bottom: 20px;
 }
 
-.basket-item{
+.basket-item {
     width: 100%;
     padding: 10px 20px 10px 20px;
     display: flex;
@@ -106,13 +106,13 @@ header {
     gap: 10px;
 }
 
-.basket-item-informations{
+.basket-item-informations {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.amount_div{
+.amount_div {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -121,25 +121,43 @@ header {
     border-radius: 20px;
 }
 
-.amount-btn:hover{
+.amount-btn:hover {
     cursor: pointer;
 }
 
-#price_calculation_div{
+#price_calculation_div {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
 
-.price-div{
+.price-div {
     display: flex;
     justify-content: space-between;
     padding: 5px 20px 0px 20px;
 }
 
-.price-div span{
+.price-div span {
     font-weight: 300;
+}
+
+#pay_btn {
+    margin-top: 20px;
+    background-color: #FF8000;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#pay_btn:hover {
+    scale: 1.01;
+    transition: scale 100ms ease-in-out;
 }
 
 .main-img {
@@ -184,7 +202,7 @@ header {
     gap: 20px;
 }
 
-.meal-image{
+.meal-image {
     height: 200px;
     object-fit: cover;
 }
@@ -198,8 +216,9 @@ header {
     cursor: pointer;
 }
 
-.meal-item:hover{
+.meal-item:hover {
     background-color: #F5F5F5;
+    cursor: pointer;
 }
 
 .meal-information {
@@ -213,7 +232,7 @@ header {
     height: 40px;
 }
 
-footer{
+footer {
     background-color: #c9c9c9;
 
 }

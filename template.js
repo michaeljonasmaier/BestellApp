@@ -17,8 +17,9 @@ function createMealContainer(category) {
                     </div>`
 }
 
-function stylePrice(categoryArray) {
-    let styledPrice = categoryArray.price.toFixed(2).replace(".", ",");
+function stylePrice(meal) {
+    let price = meal.price * meal.amount
+    let styledPrice = price.toFixed(2).replace(".", ",");
     return styledPrice + " €"
 }
 
@@ -27,11 +28,11 @@ function getBasketItemTemplate(mealToAdd) {
         <span id="meal_title">${mealToAdd.title}</span>
         <div class="basket-item-informations">
         <div class="amount_div">
-            <img class="amount-btn" src="./img/minus.png" alt="" onclick="removeItem()">
-            <span id="amount">1</span>
-            <img class="amount-btn" src="./img/plus.png" alt="" onclick="addItem()">
+            <img class="amount-btn" src="./img/minus.png" alt="" onclick="removeItem(${mealToAdd.id})">
+            <span id="amount_${mealToAdd.id}">${mealToAdd.amount}</span>
+            <img class="amount-btn" src="./img/plus.png" alt="" onclick="addToBasket(${mealToAdd.id})">
         </div>
-        <span id="total_rice">${stylePrice(mealToAdd)}</span>
+        <span id="total_price">${stylePrice(mealToAdd)}</span>
     </div>
     </div>`
     return basketTemplate;
@@ -50,6 +51,9 @@ function getPriceTemplate(price) {
     <div class="price-div">
         <span><b>Gesamt</b></span>
         <span id="total"><b>${calculatePrice(price).toFixed(2).replace(".", ",")} €</b></span>
-    </div>`
+    </div>
+    <div class="price-div">
+        <button id="pay_btn">Bezahlen (${calculatePrice(price).toFixed(2).replace(".", ",")} €)</button>
+    </div>` 
     return priceTemplate;
 }
