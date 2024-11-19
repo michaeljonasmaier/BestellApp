@@ -103,9 +103,9 @@ function removeItem(itemID) {
         if(basket[i].id == itemID){
             basket[i].amount--;
             if(basket[i].amount==0){
+                basket[i].amount = 1;
                 basket.splice(i, 1);
-            } else if (basket[i].amount == 1){
-            }
+            } 
         }
     }
     renderBasket();
@@ -118,4 +118,12 @@ function checkButtonImage(amount){
     } else {
         return "bin"
     }
+}
+
+function getActiveNavItem(clickedItem){
+    let navItems = document.getElementsByClassName("nav-item");
+    for(let i=0; i<navItems.length; i++){
+        navItems[i].classList.remove("active-nav-item");
+    }
+    clickedItem.classList.add("active-nav-item");
 }
