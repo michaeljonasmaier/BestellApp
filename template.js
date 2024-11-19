@@ -36,3 +36,20 @@ function getBasketItemTemplate(mealToAdd) {
     </div>`
     return basketTemplate;
 }
+
+function getPriceTemplate(price) {
+    let priceTemplate = /*html*/`
+    <div class="price-div">
+        <span>Zwischensumme</span>
+        <span id="subtotal">${price.toFixed(2).replace(".", ",")} €</span>
+    </div>
+    <div class="price-div">
+        <span>Lieferkosten</span>
+        <span id="delivery">${calculateDelivery(price)}</span>
+    </div>
+    <div class="price-div">
+        <span><b>Gesamt</b></span>
+        <span id="total"><b>${calculatePrice(price).toFixed(2).replace(".", ",")} €</b></span>
+    </div>`
+    return priceTemplate;
+}
