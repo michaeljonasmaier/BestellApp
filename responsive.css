@@ -40,4 +40,46 @@
         display: block;
     }
 
+    footer{
+        margin-bottom: 80px;
+    }
 }
+
+@media(max-width: 600px) {
+    .header-content {
+        padding: 10px 20px 10px 20px;
+    }
+
+    .pd-left-right {
+        padding-left: 20px;
+        padding-right: 20px;
+    }   
+
+    .restaurant-information{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-div{
+        padding-top: 40px;
+    }
+}
+
+@media(max-width: 500px){
+    h2:first-child{
+        margin-top: 20px;
+    }
+
+    .header-content img {
+        width: 80px;
+    }
+
+    .main-img{
+        height: 200px;
+    }
+
+    .meal-image{
+        height: 150px;
+    }
+}
+
