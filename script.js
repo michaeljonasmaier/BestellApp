@@ -44,6 +44,7 @@ function addToBasket(itemID) {
         renderBasket();
     }
     checkIfBasketEmpty();
+    updateBasketBtn();
 }
 
 function findMealById(id) {
@@ -67,11 +68,16 @@ function checkIfBasketEmpty() {
 
 function renderPrice() {
     let container = document.getElementById("price_calculation_div");
+    let price = getPrice();
+    container.innerHTML = getPriceTemplate(price);
+}
+
+function getPrice(){
     let price = 0;
     for (let i = 0; i < basket.length; i++) {
         price += (basket[i].price * basket[i].amount);
     }
-    container.innerHTML = getPriceTemplate(price);
+    return price
 }
 
 function calculateDelivery(price) {
@@ -110,6 +116,7 @@ function removeItem(itemID) {
     }
     renderBasket();
     checkIfBasketEmpty();
+    updateBasketBtn()
 }
 
 function checkButtonImage(amount){
@@ -126,4 +133,15 @@ function getActiveNavItem(clickedItem){
         navItems[i].classList.remove("active-nav-item");
     }
     clickedItem.classList.add("active-nav-item");
+}
+
+function updateBasketBtn(){
+    let basketButton = document.getElementById("open_basket_btn");
+    let price = calculatePrice(getPrice());
+    let styledPrice = price.toFixed(2).replace(".", ",")
+    if(basket.length>0){
+        basketButton.innerHTML = `Warenkorb (${styledPrice} €)`;
+    } else {
+        basketButton.innerHTML = `Warenkorb`;
+    }
 }

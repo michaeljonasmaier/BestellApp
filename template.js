@@ -1,5 +1,5 @@
 function getMealTemplate(meal, index) {
-    let template = /*html*/`<div id="meal_${meal.id}" class="meal-item" onclick="addToBasket(${meal.id}), openBasket()">
+    let template = /*html*/`<div id="meal_${meal.id}" class="meal-item" onclick="addToBasket(${meal.id})">
     <div class="meal-information">
         <h3>${meal.title}</h3>
         <span>${meal.description}</span>
