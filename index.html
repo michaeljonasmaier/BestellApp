@@ -9,11 +9,13 @@
     <script src="script.js"></script>
     <script src="template.js"></script>
     <script src="meals.js"></script>
+    <script src="responsive_basket.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 
-<body onload="init()">
+<body onload="init(), toggleBasket()">
     <div class="full-content">
         <header>
             <section class="header-content">
@@ -56,9 +58,12 @@
                     <!--Elements to be rendered-->
                 </div>
             </section>
-            <section class="basket-sec">
+            <section class="basket-sec" id="basket_sec">
                 <div class="basket">
-                    <h1>Warenkorb</h1>
+                    <div class="basket-header" id="basket_header">
+                        <div class="basket-title"><h1>Warenkorb</h1></div>
+                        <img class="close-img" src="./img/close.png" alt="" onclick="closeBasket()">
+                    </div> 
                     <div class="basket-content" id="basket_content">
                         <span id="empty_basket_msg">Füge ein Gericht zum Warenkorb hinzu.</span>
                     </div>
@@ -67,6 +72,11 @@
                     </div>
                 </div>
             </section>
+            <section id="basket_btn-sec" class="d-none">
+                <div class="basket-btn" id="open_basket_div">
+                    <button class="pd-left-right" id="open_basket_btn" onclick="openBasket()">Warenkorb</button>
+                </div>
+            </section>  
         </div>
 
         <footer>

@@ -1,5 +1,5 @@
 function getMealTemplate(meal, index) {
-    let template = /*html*/`<div id="meal_${meal.id}" class="meal-item" onclick="addToBasket(${meal.id})">
+    let template = /*html*/`<div id="meal_${meal.id}" class="meal-item" onclick="addToBasket(${meal.id}), openBasket()">
     <div class="meal-information">
         <h3>${meal.title}</h3>
         <span>${meal.description}</span>
@@ -40,20 +40,22 @@ function getBasketItemTemplate(mealToAdd) {
 
 function getPriceTemplate(price) {
     let priceTemplate = /*html*/`
-    <div class="price-div">
-        <span>Zwischensumme</span>
-        <span id="subtotal">${price.toFixed(2).replace(".", ",")} €</span>
+    <div class="calculation-text">
+        <div class="price-div">
+            <span>Zwischensumme</span>
+            <span id="subtotal">${price.toFixed(2).replace(".", ",")} €</span>
+        </div>
+        <div class="price-div">
+            <span>Lieferkosten</span>
+            <span id="delivery">${calculateDelivery(price)}</span>
+        </div>
+        <div class="price-div">
+            <span><b>Gesamt</b></span>
+            <span id="total"><b>${calculatePrice(price).toFixed(2).replace(".", ",")} €</b></span>
+        </div>
     </div>
-    <div class="price-div">
-        <span>Lieferkosten</span>
-        <span id="delivery">${calculateDelivery(price)}</span>
-    </div>
-    <div class="price-div">
-        <span><b>Gesamt</b></span>
-        <span id="total"><b>${calculatePrice(price).toFixed(2).replace(".", ",")} €</b></span>
-    </div>
-    <div class="price-div">
+    <div class="pay-btn-div price-div">
         <button id="pay_btn">Bezahlen (${calculatePrice(price).toFixed(2).replace(".", ",")} €)</button>
-    </div>` 
+    </div>`
     return priceTemplate;
 }
