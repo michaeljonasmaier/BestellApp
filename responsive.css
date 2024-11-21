@@ -1,3 +1,16 @@
+@media(max-width: 3840px){
+    .restaurant-logo-div{
+        left: 40%;
+    }
+}
+
+@media(max-width: 2200px){
+    .restaurant-logo-div{
+        left: 25%;
+    }
+}
+
+
 @media(max-width: 1600px) {
     .header-content {
         padding: 10px 50px 10px 50px;
