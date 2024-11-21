@@ -20,6 +20,15 @@
         flex-direction: column;
     }
 
+    .restaurant-logo-div{
+        left: 45%;
+    }
+
+    .restaurant-logo{
+        width: 60px;
+        height: 60px;    
+    }
+
     .basket-sec {
         width: 100%;
         background-color: #FCFCFC;
@@ -78,8 +87,19 @@
         height: 200px;
     }
 
+    .restaurant-logo-div{
+        top: 170px;
+        left: 42%;
+    }
+
     .meal-image{
         height: 150px;
+    }
+}
+
+@media(max-width: 400px){
+    .restaurant-logo-div{
+        left: 40%;
     }
 }
 

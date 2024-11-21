@@ -202,6 +202,22 @@ header {
     object-fit: cover;
 }
 
+.restaurant-logo-div{
+    position: absolute;
+    left: 25%;
+    top: 300px;
+    background-color: #FCFCFC;
+    border-radius: 50%;
+    border: solid 4px #FF8000;
+    padding: 15px;
+}
+
+.restaurant-logo{
+    width: 80px;
+    height: 80px;
+    
+}
+
 .restaurant-information {
     display: flex;
     gap: 20px;
