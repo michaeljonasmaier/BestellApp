@@ -61,6 +61,7 @@ function checkIfBasketEmpty() {
     if (basket.length > 0) {
         renderPrice();
     } else {
+        console.log("hier")
         document.getElementById("basket_content").innerHTML = `<span id="empty_basket_msg">Füge ein Gericht zum Warenkorb hinzu.</span>`;
         document.getElementById("price_calculation_div").innerHTML = ``;
     }
@@ -144,4 +145,23 @@ function updateBasketBtn(){
     } else {
         basketButton.innerHTML = `Warenkorb`;
     }
+}
+
+function openDialog(){
+    document.getElementById("confirmation_dialog").showModal();
+}
+
+function closeDialog(){
+    clearBasket();
+    document.getElementById("confirmation_dialog").close();
+}
+
+function clearBasket(){
+    basket = [];
+    for(let i=0; i<meals.Pizza.length; i++){
+        meals.Pizza[i].amount = 1;
+        meals.Pastagerichte[i].amount = 1;
+        meals.Getränke[i].amount = 1;
+    }
+    checkIfBasketEmpty();
 }

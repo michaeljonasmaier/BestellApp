@@ -55,7 +55,7 @@ function getPriceTemplate(price) {
         </div>
     </div>
     <div class="pay-btn-div price-div">
-        <button id="pay_btn">Bezahlen (${calculatePrice(price).toFixed(2).replace(".", ",")} €)</button>
+        <button id="pay_btn" onclick="openDialog()">Bezahlen (${calculatePrice(price).toFixed(2).replace(".", ",")} €)</button>
     </div>`
     return priceTemplate;
 }
