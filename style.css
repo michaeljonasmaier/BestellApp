@@ -120,7 +120,7 @@ header {
     width: 90%;
     padding-top: 20px;
     padding-bottom: 20px;
-    max-height: 680px;
+    max-height: 60vh;
     overflow-y: auto;
     overflow-x: hidden;
 }

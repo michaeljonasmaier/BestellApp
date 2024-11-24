@@ -16,7 +16,6 @@ function toggleBasket() {
 window.addEventListener('resize', toggleBasket);
 
 function openBasket() {
-    console.log("sind drin")
     document.getElementById("basket_sec").classList.remove("d-none");
     isOpened = true;
 }

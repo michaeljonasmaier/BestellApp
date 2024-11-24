@@ -61,7 +61,6 @@ function checkIfBasketEmpty() {
     if (basket.length > 0) {
         renderPrice();
     } else {
-        console.log("hier")
         document.getElementById("basket_content").innerHTML = `<span id="empty_basket_msg">Füge ein Gericht zum Warenkorb hinzu.</span>`;
         document.getElementById("price_calculation_div").innerHTML = ``;
     }
@@ -164,4 +163,5 @@ function clearBasket(){
         meals.Getränke[i].amount = 1;
     }
     checkIfBasketEmpty();
+    updateBasketBtn();
 }
